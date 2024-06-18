@@ -58,7 +58,7 @@ type Meta struct {
 // the first return value is the table name, the second id is whether the table existed long ago
 func findTableName(fileName string, db *gorm.DB) (string, bool, error) {
 	// open the doc and calculate the md5 hash
-	file, err := os.Open(fmt.Sprintf("../../docs/%s", fileName))
+	file, err := os.Open(fmt.Sprintf("../docs/%s", fileName))
 	if err != nil {
 		return "", false, fmt.Errorf("failed to open the file: %s", err)
 	}

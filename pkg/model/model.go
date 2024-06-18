@@ -27,7 +27,7 @@ type modelConfig struct {
 // get the llm configuration from the specified file
 func getConfig() *modelConfig {
 	// open the specified file
-	configFile, err := os.Open("../../pkg/model/modelConfig.json")
+	configFile, err := os.Open("../pkg/model/modelConfig.json")
 	if err != nil {
 		log.Fatal(err)
 	}

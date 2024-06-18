@@ -14,7 +14,7 @@ type Chunk struct {
 }
 
 func SplitDoc(docName string, chunkSize int) ([]*Chunk, error) {
-	fileDoc, err := os.Open(fmt.Sprintf("../../docs/%s", docName))
+	fileDoc, err := os.Open(fmt.Sprintf("../docs/%s", docName))
 	if err != nil {
 		return nil, fmt.Errorf("an error occured when opening the document: %s", err)
 	}
