@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package faiss;
+
+// FaissService defines the gRPC service for handling vector similarity.
+service FaissService {
+    // FindSimilarChunks handles the request for finding similar chunks based on a given embedding vector.
+    rpc FindSimilarChunks (SimilarityRequest) returns (SimilarityReply) {}
+}
+
+
+// SimilarityRequest represents a request containing a vector embedding.
+message SimilarityRequest {
+    repeated float embedding = 1; // A list of float32 numbers representing the embedding vector.
+}
+
+// SimilarityReply represents a response containing similar chunk contents or an error.
+message SimilarityReply {
+    repeated string chunk_contents = 1; // Similar chunk contents returned by the server.
+    string error = 2; // Error message in case of failure.
+}

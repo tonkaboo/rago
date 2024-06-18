@@ -1,0 +1,9 @@
+{
+    "apiType": "ollama",
+    "chatModel": "llama3",
+    "embedModel": "mxbai-embed-large",
+    "baseUrl": "",
+    "port": "11434",
+    "apiKey": "",
+    "temperature": "0.7"
+}
